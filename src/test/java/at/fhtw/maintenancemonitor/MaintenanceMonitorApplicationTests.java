@@ -22,5 +22,10 @@ class MaintenanceMonitorApplicationTests {
 		Assertions.assertEquals("ok", monitor.resetMessage());
 	}
 
+	@Test
+	public void test_maintenanceMonitorSetMessage(){
+		MaintenanceMonitorController monitor = new MaintenanceMonitorController();
+		Assertions.assertEquals("ok", monitor.printMessage());
+	}
 
 }
