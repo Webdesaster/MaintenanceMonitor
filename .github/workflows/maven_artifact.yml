@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven in CI_artifact
+name: Java CI with Maven in master
 
 on:
   push:
@@ -34,7 +34,7 @@ jobs:
 
       - run: mkdir staging && cp target/*.jar staging
       - name: Upload a Build Artifact
-        uses: actions/Upload-artifact@v2
+        uses: actions/Upload-artifact@v3
         with:
           name: Build
           path: staging
