@@ -15,7 +15,9 @@ public class MaintenanceMonitorController {
         return m;
     }
 
-    //TODO set
-
-    //TODO reset
+    @GetMapping("/api/message/reset")
+    public String resetMessage(){
+    this.m = "Everything works as expected";
+        return "ok";
+    }
 }
