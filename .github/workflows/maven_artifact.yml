@@ -14,7 +14,7 @@ on:
   pull_request:
     branches: [ "CI_artifact" ]
 
-jjobs:
+jobs:
   build:
 
     runs-on: ubuntu-latest
