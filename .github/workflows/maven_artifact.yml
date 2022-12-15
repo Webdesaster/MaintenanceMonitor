@@ -10,9 +10,9 @@ name: Java CI with Maven in CI_artifact
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "CI_artifact" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "CI_artifact" ]
 
 jobs:
   build:
@@ -34,7 +34,7 @@ jobs:
 
       - run: mkdir staging && cp target/*.jar staging
       - name: Upload a Build Artifact
-        uses: actions/Upload-artifact@v2
+        uses: actions/Upload-artifact@v3
         with:
           name: Build
           path: staging
