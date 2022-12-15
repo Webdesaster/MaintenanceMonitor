@@ -17,4 +17,12 @@ class MaintenanceMonitorApplicationTests {
 		Assertions.assertEquals("Everything works as expected", monitor.printMessage());
 	}
 
+	@Test
+	public void test_maintenanceMonitiorSetMessagePrintMessage(){
+		MaintenanceMonitorController monitor = new MaintenanceMonitorController();
+		monitor.setMessage("Service checks: No power until 5:00 pm");
+		Assertions.assertEquals("Service checks: No power until 5:00 pm", monitor.printMessage());
+	}
+
+
 }
