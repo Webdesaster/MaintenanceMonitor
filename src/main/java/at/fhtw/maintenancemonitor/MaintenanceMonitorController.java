@@ -20,12 +20,11 @@ public class MaintenanceMonitorController {
     this.m = "Everything works as expected";
         return "ok";
     }
-    //TODO set
     @GetMapping("/api/message/set")
     public String setMessage(String m) {
         this.m = m;
         return "ok";
     }
 
-    //TODO reset
+
 }
