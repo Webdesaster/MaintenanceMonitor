@@ -12,7 +12,7 @@ class MaintenanceMonitorApplicationTests {
 	}
 
 	@Test
-	public void test_maintenanceMonitiorPrintMessage(){
+	public void test_maintenanceMonitorPrintMessage(){
 		MaintenanceMonitorController monitor = new MaintenanceMonitorController();
 		Assertions.assertEquals("Everything works as expected", monitor.printMessage());
 	}
@@ -29,7 +29,7 @@ class MaintenanceMonitorApplicationTests {
 	}
 
 	@Test
-	public void test_maintenanceMonitiorSetMessagePrintMessage(){
+	public void test_maintenanceMonitorSetMessagePrintMessage(){
 		MaintenanceMonitorController monitor = new MaintenanceMonitorController();
 		monitor.setMessage("Service checks: No power until 5:00 pm");
 		Assertions.assertEquals("Service checks: No power until 5:00 pm", monitor.printMessage());
