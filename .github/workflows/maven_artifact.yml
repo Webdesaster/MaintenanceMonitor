@@ -10,9 +10,9 @@ name: Java CI with Maven in CI_artifact
 
 on:
   push:
-    branches: [ "CI_artifact" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "CI_artifact" ]
+    branches: [ "master" ]
 
 jobs:
   build:
