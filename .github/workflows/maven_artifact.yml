@@ -6,13 +6,13 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven in Develop
+name: Java CI with Maven in CI_artifact
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "CI_artifact" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "CI_artifact" ]
 
 jobs:
   build:
@@ -29,3 +29,9 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: copy to staging
+      run: mkdir staging && cp target/*.jar staging
+    - name: upload
+      uses: actions/upload-artifact@v2
+      with: Package
+      path: staging
